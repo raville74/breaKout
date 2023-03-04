@@ -19,11 +19,11 @@ Timer(int X, int Y, float delay)
   }
     void countUp()
   {
-    time += 1/framerate;
+    //time += 1/framerate;
   }
     void countDown()
   {
-    time -= 1/framerate;
+    //time -= 1/framerate;
   }
   
 }
