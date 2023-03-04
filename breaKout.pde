@@ -61,13 +61,10 @@ void is_bounced_with_bar(){ // une fois la balle rebondissant sur la raquette
 
 Timer StartTimer;
 
-void draw()
-{
-  background(200); 
-  startTimer.countUp();
-  fill(0);
-  text(startTimer.getTime(),20,20);
-  
-  
-  
-}
+//void draw()
+//{
+//  background(200); 
+//  startTimer.countUp();
+//  fill(0);
+//  text(startTimer.getTime(),20,20);
+//}

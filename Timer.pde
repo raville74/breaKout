@@ -6,8 +6,8 @@ class Timer
 Timer(int X, int Y, float delay)
   {
     time = delay;
-    posX = X
-    posY = Y
+    posX = X;
+    posY = Y;
   }
     float getTime()
   {
