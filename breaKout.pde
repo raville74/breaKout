@@ -1,6 +1,7 @@
 /** breaKout **/
-// 4 première ligne je vois une création de fichier/emplacement nommé ball,bar,wall,score//
+// 4 première ligne , une création de fichier/emplacement nommé ball,bar,wall,score//
 Ball ball1, ball2;
+Ball[] ballx;
 Bar bar;
 Wall wall;
 Score score; 
