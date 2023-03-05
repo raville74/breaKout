@@ -1,6 +1,6 @@
 /** breaKout **/
 // 4 première ligne je vois une création de fichier/emplacement nommé ball,bar,wall,score//
-Ball ball, ball2;
+Ball ball;
 Bar bar;
 Wall wall;
 Score score; 
@@ -21,8 +21,7 @@ void setup() {
   hbar = 10; // paramètre de largeur de la raquette
   miwbar = wbar/2; // position de la balle au depart au milieu de la raquette
   size(800, 600); // taille de la fenetre crée
-  ball = new Ball(diameter, 600, 600, live); // limite avant la mort de la balle, caractéristique de la balle
-  ball2 = new Ball(diameter, 600, 600, live);
+  ball = new Ball(diameter, 600, 600, live); // limite avant la mort de la balle, caractéristique de la balle 
   bar = new Bar(wbar,hbar); // création de la raquette
   wall = new Wall(wallCols,wallRows);  // x,y création du mur 
   score = new Score(wall, ball); // affichage du score et création du score avec le codage du mur et de la balle 
@@ -60,7 +59,7 @@ void is_bounced_with_bar(){ // une fois la balle rebondissant sur la raquette
   }
 }
 
-Timer StartTimer;
+//Timer StartTimer;
 
 //void draw()
 //{
@@ -68,4 +67,7 @@ Timer StartTimer;
 //  startTimer.countUp();
 //  fill(0);
 //  text(startTimer.getTime(),20,20);
+  
+  
+  
 //}
