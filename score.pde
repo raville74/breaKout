@@ -15,7 +15,7 @@ public class Score {
     fill(0);
     rect(600,1,200,600);
     
-    if ( b1.live < 0) {
+    if ( b1.live <= 0 && b2.live <= 0) {
       fill(0);
       stroke(0);
       PFont font = createFont("Liberation Sans", 32);
@@ -32,7 +32,8 @@ public class Score {
       PFont font = createFont("Liberation Sans", 32);
       textFont(font);
       text("Score: " + w.getScore(), 610, 50);
-      text("Live: " + b1.getLive(), 610, 100);
+      text("jaune Live:" + b1.getLive(), 610, 100);
+      text("rouge Live:" + b2.getLive(), 610, 150);
     }
   }
 }

@@ -43,7 +43,7 @@ class Ball{
 }
     
     public void display() {
-        if (live >= 0) {
+        if (live > 0) {
             //fill(#FFF80D);
             fill(cr, cg, cb);
             stroke(0);

@@ -13,7 +13,7 @@ private float wbar, hbar, miwbar; //je comprend que nous parlons de la raquette 
 private int live; //je comprend la création du scoreboard au niveau du coté gauche.
 
 void setup() {
-  live = 3; // nous commencons avec 3 vies.
+  live = 3;
   wallCols = 12; //  c'est la création du nombre de ligne de briques, wallcols est le nombre de brique en longueur et wallrow en largeur.
   wallRows = 14;
   diameter =20; // est la création du diamètre de la balle.
@@ -35,7 +35,7 @@ void draw(){
   ball1.display(); // affichage de la balle
   ball2.display();
 
-  bar.display(); //affichage de la raquette
+   bar.display(); //affichage de la raquette
   if (ball1.mv){
  is_bounced_with_bar(ball1); 
   } 
@@ -58,7 +58,7 @@ void mousePressed(){
     ball2.setVY(-10);
     ball2.mv = true;
    }
-  if (ball1.live < 0 || ball2.live < 0 ) {
+  if (ball1.live <= 0 && ball2.live <= 0 ) {
     exit();
   }
 }
