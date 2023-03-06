@@ -18,6 +18,7 @@ public class Wall{
     for (int j = 0; j < rows; j++){ // y
       for (int i = 0; i < cols; i++){ // x
         aBricks[i][j].putBrick(ball1);
+         aBricks[i][j].putBrick(ball2);
       }
     }
   }

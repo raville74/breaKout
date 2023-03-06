@@ -1,4 +1,4 @@
-class Ball{
+class ball2 {
   private float x,y,vx,vy,diameter,radius;
   private int wscreen,hscreen;
   private boolean mv;
@@ -7,19 +7,14 @@ class Ball{
   private int cg;
   private int cb;
 
-  
-  public Ball(float pdiameter,int pwscreen,int phscreen, int plive, int pcr, int pcg, int pcb ){
-    diameter = pdiameter;
+public ball2 (float pdiameter,int pwscreen,int phscreen){
+   diameter = pdiameter;
     wscreen = pwscreen;
     hscreen = phscreen;
     live = plive;
-    cr = pcr;
-    cg = pcg;
-    cb = pcb;
     init(pdiameter);
   }
- 
-  public void init(float pdiameter){
+public void init(float pdiameter){
     diameter = pdiameter;
     radius = diameter / 2;
     x = width / 2;
@@ -27,9 +22,8 @@ class Ball{
     vy = -10;
     vx = random(-5,-2);
     mv = false;
-  }
- 
-  public void bounceY(){
+}
+ public void bounceY(){
     vy *= -1;
   }
   
@@ -44,7 +38,6 @@ class Ball{
  
   public void display(){
     //fill(#FFF80D);
-    fill(cr, cg, cb);
     stroke(0);
     ellipse(x,y,diameter,diameter);
     if (mv) {
