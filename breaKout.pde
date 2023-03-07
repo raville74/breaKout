@@ -7,14 +7,14 @@ Score score;
 Timer timer;
 
 private int wallCols, wallRows; // x,y je vois que nous somme en train de crée le nombre de ligne de briques a casser avec la balle 
-private float diameter, radius; //  je comprend la création d'un diametre (la tille de la balle)
+private float diameter, radius; //  je comprend la création d'un diametre la taille de la balle
 private float wbar, hbar, miwbar; //je comprend que nous parlons de la raquette nommé "bar"
 private int live; //je comprend la création du scoreboard au niveau du coté gauche.
 private int nbBall;
 
 void setup() {
-  live = 1;
-  nbBall = 1;
+  live = 3;
+  nbBall = 3;
   wallCols = 12; //  c'est la création du nombre de ligne de briques, wallcols est le nombre de brique en longueur et wallrow en largeur.
   wallRows = 14;
   diameter =20; // est la création du diamètre de la balle.
