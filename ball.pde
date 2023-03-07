@@ -67,7 +67,7 @@ class Ball{ // création de la class ball
         }
 }
     
-    public void setY(float py) { // cette ligne je ne comprend pas trop pourquoi elle est la et ce qu'elle fais ici
+    public void setY(float py) { 
         y = py;
 }
     
