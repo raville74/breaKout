@@ -4,9 +4,9 @@ public class Score {
   private Ball bx;
   
   // #FIXME remplacer les 3 parametres pb1... par pbx
-  public Score(Wall pw, Ball pb1, Ball pb2, Ball pb3) {
+  public Score(Wall pw, Ball pbx) {
     w = pw;
-   ball  bx
+   ball = bx
   }
 
   public void display(){
