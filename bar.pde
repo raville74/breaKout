@@ -1,30 +1,25 @@
-public class Bar{
-  private float x,y,wbar,miwbar,hbar,hmargin,vx,vy;
-  private boolean display;
+public class Bar{ // créationde la class bar 
+  private float x,y,wbar,miwbar,hbar,hmargin,vx,vy; // j'imagine bine que c'est le mouvement de la bar sur l'axe x et y 
+  private boolean display; // affichage de la bar 
   
-  public Bar(float pwbar, float phbar){
+  public Bar(float pwbar, float phbar){ // construteur de la bar 
     wbar=pwbar;
     hbar=phbar;
     init(wbar, hbar);
   }
+
   
-  public Bar(){
-    wbar = 100;
-    hbar = 10;
-    init(wbar,hbar);
-  }
-  
-  public void init(float wbar, float hbar){
-    hmargin = 1;
-    miwbar = wbar / 2;
-    x = width / 2;
+  public void init(float wbar, float hbar){ // paramètre de la bar 
+    hmargin = 2; //hauteur en fonction du sol de la bar 
+    miwbar = wbar / 2; //apparition de la balle sur la bar 
+    x = width / 2; // ne sert a rien malgré le changement des chiffres 
     y = height - hbar - hmargin;
     vy = 0;
     vx = 0;
     display = true;
   }
   
-  public void display(){
+  public void display(){ // affichage des couleurs de la bar et de la bar 
     if (display){
       x = mouseX;
       fill(#00D8AE);
@@ -36,7 +31,7 @@ public class Bar{
     return y;
   }
   
-  public float getX(){
+  public float getX(){ // pour changer chaque fonction de la bar 
     return x;
   }
   

@@ -14,7 +14,7 @@ private int nbBall;
 
 void setup() {
   live = 3;
-  nbBall = 50;
+  nbBall = 1;
   wallCols = 12; //  c'est la création du nombre de ligne de briques, wallcols est le nombre de brique en longueur et wallrow en largeur.
   wallRows = 10;
   diameter = 20; // est la création du diamètre de la balle.
