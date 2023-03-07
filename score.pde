@@ -37,7 +37,6 @@ public class Score {
         PFont font = createFont("Liberation Sans", 16);
         textFont(font);
         text("Score: " + w.getScore(), 610, 50);
-
         int i = 0;
         for (Ball b : bx) {
           i++;

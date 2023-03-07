@@ -1,6 +1,6 @@
 class Ball {
     private float x,y,vx,vy,diameter,radius; //diamètre de la ball "y" et "x"
-    private int wscreen,hscreen; // c'est l'endroit ou le mur sur le coté droit et gauche de la balle s'arrete 
+    private int wscreen,hscreen; // c'est le mur droit et gauche de la balle rebondit
     private boolean mv; // c'est pour crée un mouvement de la balle 
     private int live; //crée les vies de la balle 
     private int cr;

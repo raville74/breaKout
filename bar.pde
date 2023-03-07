@@ -27,7 +27,7 @@ public class Bar{
   public void display(){
     if (display){
       x = mouseX;
-      fill(#00D8DE);
+      fill(#00D8AE);
       rect(x-miwbar,y,wbar,hbar);
     }
   }

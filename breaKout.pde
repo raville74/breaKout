@@ -14,7 +14,7 @@ private int nbBall;
 
 void setup() {
   live = 3;
-  nbBall = 1;
+  nbBall = 50;
   wallCols = 12; //  c'est la création du nombre de ligne de briques, wallcols est le nombre de brique en longueur et wallrow en largeur.
   wallRows = 10;
   diameter = 20; // est la création du diamètre de la balle.
@@ -36,11 +36,12 @@ void setup() {
 void draw(){
    background(255,255,255); // cela va être toute les variable de couleur RGB avec 255 taux de couleur différente pour chaucun des trois 
    for (Ball b : ballx) {
+     is_bounced_with_bar(b);
      b.display();
   }
   bar.display(); //affichage de la raquette 
   wall.display(ballx); // afichage du mur et lui donne les coordonnee de la balle
-  score.display(); //affiche le score 
+  score.display(); //affiche le score
 }
 
 void mousePressed(){
@@ -59,6 +60,7 @@ void mousePressed(){
       exit();
     }
 }
+
 void is_bounced_with_bar(Ball b){  
   float Y = b.getY();
   float X = b.getX();
