@@ -7,7 +7,7 @@ class Ball{
     private int cg;
     private int cb;
     
-    
+    // constructeur
     public Ball(float pdiameter,int pwscreen,int phscreen, int plive, int pcr, int pcg, int pcb) {
         diameter = pdiameter;
         wscreen = pwscreen;
