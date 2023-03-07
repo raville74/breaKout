@@ -14,11 +14,13 @@ public class Wall{
     buildWall();
   }
 
-  public void display(Ball ball1, Ball ball2) {
+  public void display(Ball[] bx) {
     for (int j = 0; j < rows; j++){ // y
       for (int i = 0; i < cols; i++){ // x
-        aBricks[i][j].putBrick(ball1);
-         aBricks[i][j].putBrick(ball2);
+        for (Ball b : ballx) {
+            aBricks[i][j].putBrick(b);
+        }
+      
       }
     }
   }
