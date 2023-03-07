@@ -6,7 +6,7 @@ public class Score {
   // #FIXME remplacer les 3 parametres pb1... par pbx
   public Score(Wall pw, Ball pbx) {
     w = pw;
-   ball = bx
+   bx = pbx
   }
 
   public void display(){
