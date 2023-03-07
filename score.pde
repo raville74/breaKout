@@ -3,6 +3,7 @@ public class Score {
   private Wall w;
   private Ball bx;
   
+  // #FIXME remplacer les 3 parametres pb1... par pbx
   public Score(Wall pw, Ball pb1, Ball pb2, Ball pb3) {
     w = pw;
    ball  bx
@@ -34,7 +35,6 @@ public class Score {
       text("jaune Live:" + b1.getLive(), 610, 100);
       text("rouge Live:" + b2.getLive(), 610, 150);
       text("bleu Live:" + b3.getLive(), 610, 200);
-    
     }
   }
 }
