@@ -1,12 +1,12 @@
 public class Score {
 
   private Wall w;
-  private Ball bx;
+  private Ball[] bx;
   
   // #FIXME remplacer les 3 parametres pb1... par pbx = tableau []
-  public Score(Wall pw, Ball pbx) {
+  public Score(Wall pw, Ball[] pbx) {
     w = pw;
-    bx = pbx[] // comme ca ??
+    bx = pbx // comme ca ??
   }
 
   public void display(){
