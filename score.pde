@@ -7,7 +7,7 @@ public class Score {
   public Score(Wall pw, Ball[] pbx) {
     w = pw;
     bx = pbx
-  } // il me sort une erreur de syntaxe linge 10 je crois j'ai un probeleme avec les accollades 
+  } // il me sort une érreur de syntaxe linge 10 je crois j'ai un probeleme avec l
 
   public void display(){
     fill(255);
