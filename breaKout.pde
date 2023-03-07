@@ -13,8 +13,8 @@ private int live; //je comprend la création du scoreboard au niveau du coté ga
 private int nbBall;
 
 void setup() {
-  live = 3;
-  nbBall = 3;
+  live = 1;
+  nbBall = 1;
   wallCols = 12; //  c'est la création du nombre de ligne de briques, wallcols est le nombre de brique en longueur et wallrow en largeur.
   wallRows = 14;
   diameter =20; // est la création du diamètre de la balle.
@@ -24,9 +24,12 @@ void setup() {
   miwbar = wbar/2; // position de la balle au depart au milieu de la raquette
   size(800, 600); // taille de la fenetre crée
   ballx = new Ball[nbBall];
+  for (int i = 0; i < nbBall; i++) {
+    ballx[i] = new Ball( 20, 600, 600, 3, 155, 155, 0);
+  }
   bar = new Bar(wbar,hbar); // création de la raquette
   wall = new Wall(wallCols,wallRows);  // x,y création du mur 
-  score = new Score(wall, ball1, ball2, ball3); // affichage du score et création du score avec le codage du mur et de la balle 
+  score = new Score(wall, ballx); // affichage du score et création du score avec le codage du mur et de la balle 
   timer = new Timer(300,300,10);
 }
 
