@@ -1,6 +1,6 @@
-class Ball{ // création de la class ball
+class Ball {
     private float x,y,vx,vy,diameter,radius; //diamètre de la ball "y" et "x"
-    private int wscreen,hscreen; //j'imagine qu c'est l'endroit ou le mur sur le coté droit et gauche de la balle s'arrete 
+    private int wscreen,hscreen; // c'est l'endroit ou le mur sur le coté droit et gauche de la balle s'arrete 
     private boolean mv; // c'est pour crée un mouvement de la balle 
     private int live; //crée les vies de la balle 
     private int cr;
@@ -10,8 +10,8 @@ class Ball{ // création de la class ball
     
     public Ball(float pdiameter,int pwscreen,int phscreen, int plive, int pcr, int pcg, int pcb) { // cette ligne est le constructeur de la balle 
         diameter = pdiameter; // diamètre de la balle 
-        wscreen = pwscreen; // je ne sais pas trop et pareille en dessous de cette ligne 
-        hscreen = phscreen;
+        wscreen = pwscreen; // largeur ecran
+        hscreen = phscreen; // hauteur ecran
         live= plive; // c'est pour crée la vie de la balle à elle seule 
         cr =pcr;
         cg =pcg; // ces trois lignes sont aussi pour crée une couleur de la balle RGB cart a la base il y avait trois balle differente
@@ -19,17 +19,17 @@ class Ball{ // création de la class ball
         init(pdiameter); // crée le diamètre de la balle 
   }
     
-    public void init(float pdiameter) { // ces ligne sont pour crée le paramètre du diamètre de la balle 
+    public void init(float pdiameter) { // ces lignes sont pour créer le paramètre du diamètre de la balle 
         diameter = pdiameter;                                                                             
         radius = diameter / 2;
         x = width / 2;
         y = height - diameter - 1;
-        vy =-10;
-        vx =random( - 5, - 2);
-        mv =false;
+        vy = -10; // vitesse fixe y -10
+        vx = random( -5, 5); // vitesse sur l'axe x  negative entre -5 et +5
+        mv = false;
 }
-    
-    public void bounceY() { // de cette ligne a la ligne 43 est pour crée un bounce avec la bar (rebondissement)
+
+    public void bounceY() { // de cette ligne a la ligne 43 est pour crée un bounce avec la bar ou une brique (rebondissement)
         vy *= -1;
 }
     
@@ -42,27 +42,26 @@ class Ball{ // création de la class ball
         bounceY();
 }
     
-    public void display() { // diplay est donc pour afficher la balle avec ses paramètre de couleurs ci-dessous (ligne 45 à 62)
+    public void display() { // display est donc pour afficher la balle avec ses paramètre de couleurs ci-dessous (ligne 45 à 62)
         if (live > 0) {
-            //fill(#FFF80D);
             fill(cr, cg, cb);
             stroke(0);
-            ellipse(x,y,diameter,diameter);
+            ellipse(x,y,diameter,diameter); // balle
            if (mv) {
                x += vx;
                y += vy;
                 if (x > wscreen - radius || x < radius) {
-                   vx *= -1;
+                   bounceX();
                 }
                 if (y < radius) {
-                   vy *= -1;
+                   bounceY();
                 }
                 if (y > hscreen + diameter) {
                     init(diameter);
                     live--;
                 }
         } else {
-                x = mouseX;
+            x = mouseX;
         }
         }
 }

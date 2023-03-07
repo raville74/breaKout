@@ -14,10 +14,10 @@ private int nbBall;
 
 void setup() {
   live = 3;
-  nbBall = 3;
+  nbBall = 1;
   wallCols = 12; //  c'est la création du nombre de ligne de briques, wallcols est le nombre de brique en longueur et wallrow en largeur.
-  wallRows = 14;
-  diameter =20; // est la création du diamètre de la balle.
+  wallRows = 10;
+  diameter = 20; // est la création du diamètre de la balle.
   radius = diameter/2; // je ne comprend pas du tout ce que cela signifie.
   wbar = 100; // création de la longueur de la raquette
   hbar = 10; // paramètre de largeur de la raquette
@@ -27,10 +27,10 @@ void setup() {
   for (int i = 0; i < nbBall; i++) {
     ballx[i] = new Ball( 20, 600, 600, 3, 155, 155, 0);
   }
-  bar = new Bar(wbar,hbar); // création de la raquette
-  wall = new Wall(wallCols,wallRows);  // x,y création du mur 
+  bar = new Bar(wbar, hbar); // création de la raquette
+  wall = new Wall(wallCols, wallRows);  // x,y création du mur 
   score = new Score(wall, ballx); // affichage du score et création du score avec le codage du mur et de la balle 
-  timer = new Timer(300,300,10);
+  timer = new Timer(300, 300, 10);
 }
 
 void draw(){
